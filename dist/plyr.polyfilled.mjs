@@ -13560,6 +13560,10 @@ var source = {
         if (_this2.config.playsinline) {
           _this2.media.setAttribute('playsinline', '');
         }
+
+        if (!is$1.empty(_this2.config.preload)) {
+          _this2.media.setAttribute('preload', _this2.config.preload);
+        }
       } // Restore class hook
 
 
@@ -13790,6 +13794,10 @@ function () {
 
         if (this.media.hasAttribute('loop')) {
           this.config.loop.active = true;
+        }
+
+        if (this.media.hasAttribute('preload')) {
+          this.config.preload = this.media.getAttribute('preload');
         }
 
         break;

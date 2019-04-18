@@ -234,6 +234,9 @@ class Plyr {
                 if (this.media.hasAttribute('loop')) {
                     this.config.loop.active = true;
                 }
+                if (this.media.hasAttribute('preload')) {
+                    this.config.preload = this.media.getAttribute('preload');
+                }
 
                 break;
 
